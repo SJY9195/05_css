@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- nth-child은 1부터 시작! 1번째 위치에 있는 태그를 선택해준다!-->  <!-- 타입별 마지막 위치의 태그를 선택해준다!-->
+    <style>
+
+        #test1  :first-child{    
+            color : red; 
+        }
+        #test1 :last-child{
+            color : aqua;
+        }
+        #test1 :nth-child(2){ 
+            color : blue;
+        }
+        #test2 :last-of-type{
+            color : brown;
+        }
+        #test3:hover:before{
+            content: "좋은 아침 입니다.";
+            color: red;
+        }
+        #test3:hover{
+            color: blue;
+        }
+        #test3::after{
+            content:"정민식입니다.";
+        }
+        #test3:active{
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h2>일반 구조 선택자</h2>
+    <p>특정한 위치에 있는 태그 선택(위치로 구분)</p>
+    <div id = "test1">
+        <p>테스트1</p>
+        <p>테스트1</p>
+        <p>테스트1</p>
+        <p>테스트1</p>
+        <p>테스트1</p>
+        <p>테스트1</p>
+    </div>
+
+    <hr>
+
+    <h2>형태 구조 선택자(태그별로 구분)</h2>
+    <p>특정한 위치에 있는 태그 선택(태그 별로 구분)</p>  <!--p와 pre는 다른 타입이므로 구분을 따로따로 둘다 해준다!-->
+    <div id="test2">
+        <p>테스트2</p>
+        <p>테스트2</p>
+        <p>테스트2</p>
+        <p>테스트2</p>
+        <p>테스트2</p>
+        <pre>테스트2</pre>
+        <pre>테스트2</pre>
+        <pre>테스트2</pre>
+    </div>
+
+    <hr>
+
+    <div id ="test3">
+        안녕하세요
+    </div>
+    
+</body>
+</html>
